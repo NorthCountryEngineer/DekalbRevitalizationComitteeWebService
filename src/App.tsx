@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
 import { siteSettings } from './serviceconfig'
-import { Header } from './Components/Header'
+import {Header} from './Components/Header'
 
 function App() {
 
