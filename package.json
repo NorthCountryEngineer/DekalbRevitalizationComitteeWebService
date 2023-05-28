@@ -8,6 +8,7 @@
   "dependencies": {
     "@aws-amplify/cli": "^11.1.0",
     "@aws-amplify/ui-react": "^4.3.2",
+    "@aws-sdk/client-secrets-manager": "^3.341.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.0",
@@ -16,6 +17,8 @@
     "@mui/system": "^5.4.1",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "aws-amplify": "^5.2.4",
+    "googleapis": "^118.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",

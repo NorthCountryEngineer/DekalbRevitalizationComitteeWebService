@@ -1,3 +1,5 @@
+import { Calendar } from "./Components";
+
 export function Home() {
   return (
     <div>
@@ -15,7 +17,9 @@ export function Home() {
 
         <div style={{ height: '180px' }}></div>
 
-        <div>Home Component Standin</div>
+        <div>
+            <Calendar />
+        </div>
     </div>
   );
 }
