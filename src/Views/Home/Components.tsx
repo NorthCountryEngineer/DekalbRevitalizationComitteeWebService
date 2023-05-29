@@ -2,10 +2,10 @@ import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-sec
 import { useEffect } from "react"
 
 export function Calendar() {
-    useEffect(() => {
-        const googleClientId = process.env;
-        const googleClientSecret = process.env.google_calendar_client_secret;
-        console.log(googleClientId, googleClientSecret)
+  useEffect(() => {
+    const googleClientId = process.env.google_calendar_client_id;
+    const googleClientSecret = process.env.google_calendar_client_secret;
+    console.log(googleClientId, googleClientSecret)
 
     }, [])
 
