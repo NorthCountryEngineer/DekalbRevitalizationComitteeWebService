@@ -1,0 +1,10 @@
+{
+  "resourceName": "credentialsTable",
+  "tableName": "credentialsTable",
+  "partitionKey": {
+    "fieldName": "clientID",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

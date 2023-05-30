@@ -10,6 +10,26 @@
       "StackName": "amplify-drcwebapp-prod-155145",
       "StackId": "arn:aws:cloudformation:us-east-1:665838473038:stack/amplify-drcwebapp-prod-155145/96019d00-fb35-11ed-a515-0a701dd151a5",
       "AmplifyAppId": "dogxnxxwk5cyf"
+    },
+    "categories": {
+      "auth": {
+        "drcwebappadf0e856": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "drcClientCredentialsManagementService": {},
+        "credentialsQueryFunction": {
+          "deploymentBucketName": "amplify-drcwebapp-prod-155145-deployment",
+          "s3Key": "amplify-builds/credentialsQueryFunction-5552567765302b464432-build.zip"
+        }
+      },
+      "api": {
+        "drcwebapp": {},
+        "credentialsAPI": {}
+      },
+      "storage": {
+        "credentialsTable": {}
+      }
     }
   }
 }

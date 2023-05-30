@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "drcwebapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}

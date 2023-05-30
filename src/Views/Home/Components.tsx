@@ -11,3 +11,9 @@ export function Calendar() {
 
   return <></>
 }
+
+/**type Key @model {
+  id: ID!
+  clientID: String!
+  clientSecret: String!
+} */
