@@ -20,7 +20,7 @@
         "drcClientCredentialsManagementService": {},
         "credentialsQueryFunction": {
           "deploymentBucketName": "amplify-drcwebapp-prod-155145-deployment",
-          "s3Key": "amplify-builds/credentialsQueryFunction-5552567765302b464432-build.zip"
+          "s3Key": "amplify-builds/credentialsQueryFunction-5a486148387459655845-build.zip"
         }
       },
       "api": {
