@@ -17,22 +17,10 @@
         "userPoolGroups": {}
       },
       "function": {
-        "drcClientCredentialsManagementService": {},
-        "credentialsQueryFunction": {
-          "deploymentBucketName": "amplify-drcwebapp-prod-155145-deployment",
-          "s3Key": "amplify-builds/credentialsQueryFunction-5a486148387459655845-build.zip"
-        },
-        "credentialsAPI": {
-          "deploymentBucketName": "amplify-drcwebapp-prod-155145-deployment",
-          "s3Key": "amplify-builds/credentialsAPI-542f486d44324e7a5044-build.zip"
-        }
+        "drcClientCredentialsManagementService": {}
       },
       "api": {
-        "drcwebapp": {},
-        "credentialsAPI": {}
-      },
-      "storage": {
-        "credentialsTable": {}
+        "drcwebapp": {}
       }
     }
   }

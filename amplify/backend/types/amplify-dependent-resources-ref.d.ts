@@ -1,10 +1,5 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "credentialsAPI": {
-      "ApiId": "string",
-      "ApiName": "string",
-      "RootUrl": "string"
-    },
     "drcwebapp": {
       "GraphQLAPIEndpointOutput": "string",
       "GraphQLAPIIdOutput": "string"
@@ -22,32 +17,6 @@ export type AmplifyDependentResourcesAttributes = {
     },
     "userPoolGroups": {
       "adminsGroupRole": "string"
-    }
-  },
-  "function": {
-    "credentialsAPI": {
-      "Arn": "string",
-      "LambdaExecutionRole": "string",
-      "LambdaExecutionRoleArn": "string",
-      "Name": "string",
-      "Region": "string"
-    },
-    "credentialsQueryFunction": {
-      "Arn": "string",
-      "LambdaExecutionRole": "string",
-      "LambdaExecutionRoleArn": "string",
-      "Name": "string",
-      "Region": "string"
-    }
-  },
-  "storage": {
-    "credentialsTable": {
-      "Arn": "string",
-      "Name": "string",
-      "PartitionKeyName": "string",
-      "PartitionKeyType": "string",
-      "Region": "string",
-      "StreamArn": "string"
     }
   }
 }

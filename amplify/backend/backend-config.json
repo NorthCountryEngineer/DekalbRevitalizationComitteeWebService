@@ -1,19 +1,5 @@
 {
   "api": {
-    "credentialsAPI": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "credentialsQueryFunction"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
     "drcwebapp": {
       "dependsOn": [],
       "output": {
@@ -72,78 +58,6 @@
       "service": "Cognito-UserPool-Groups"
     }
   },
-  "function": {
-    "credentialsAPI": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "StreamArn"
-          ],
-          "category": "storage",
-          "resourceName": "credentialsTable"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "credentialsQueryFunction": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "StreamArn"
-          ],
-          "category": "storage",
-          "resourceName": "credentialsTable"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_credentialsAPI_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "credentialsAPI"
-        }
-      ]
-    },
-    "AMPLIFY_function_credentialsAPI_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "credentialsAPI"
-        }
-      ]
-    },
-    "AMPLIFY_function_credentialsQueryFunction_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "credentialsQueryFunction"
-        }
-      ]
-    },
-    "AMPLIFY_function_credentialsQueryFunction_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "credentialsQueryFunction"
-        }
-      ]
-    }
-  },
-  "storage": {
-    "credentialsTable": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
-    }
-  }
+  "function": {},
+  "storage": {}
 }
