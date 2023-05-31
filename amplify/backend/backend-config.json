@@ -73,6 +73,22 @@
     }
   },
   "function": {
+    "credentialsAPI": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "credentialsTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "credentialsQueryFunction": {
       "build": true,
       "dependsOn": [
@@ -91,6 +107,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_credentialsAPI_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "credentialsAPI"
+        }
+      ]
+    },
+    "AMPLIFY_function_credentialsAPI_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "credentialsAPI"
+        }
+      ]
+    },
     "AMPLIFY_function_credentialsQueryFunction_deploymentBucketName": {
       "usedBy": [
         {
