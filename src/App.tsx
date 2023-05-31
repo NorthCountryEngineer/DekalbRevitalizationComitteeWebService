@@ -2,26 +2,41 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
 import { siteSettings } from './serviceconfig'
 import {Header} from './Components/Header'
-import { useEffect } from 'react'
-import { API, graphqlOperation } from 'aws-amplify'
+import {
+  SecretsManagerClient,
+  GetSecretValueCommand,
+} from "@aws-sdk/client-secrets-manager";
+import { useEffect } from 'react';
 
 function App() {
 
-  useEffect(() => {
-    const fetchKey = async () => {
-      try {
-        const id = '853027946447-714sv1ocm31o2f1ejrtho4j6pa7sdq3a.apps.googleusercontent.com'
-        try {console.log("try")
-        }catch(error) {console.error(error)}
-        
-      } catch (error) {
-        console.error('Error fetching key:', error)
-      }
+ 
+  useEffect(()=>{
+    const secret_name = "DRC/google_calendar_secret";
+  
+    const client = new SecretsManagerClient({
+      region: "us-east-1",
+    });
+  
+    try {
+      const response:any = async() => await client.send(
+        new GetSecretValueCommand({
+          SecretId: secret_name,
+          VersionStage: "AWSCURRENT", // VersionStage defaults to AWSCURRENT if unspecified
+        })
+      )
+
+      const secret = response.SecretString
+      console.log(secret)
+    } catch (error) {
+      // For a list of exceptions thrown, see
+      // https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+      throw error;
     }
-
-    fetchKey()
-  }, [])
-
+  },[])
+  
+  
+  
   return (
     <div>
         <Header title={siteSettings.HeaderTitle}/>
